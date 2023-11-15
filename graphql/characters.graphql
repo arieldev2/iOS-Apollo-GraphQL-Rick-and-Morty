@@ -1,0 +1,17 @@
+
+query CharacterList($page: Int) {
+  characters(page: $page) {
+    info {
+      prev
+      next
+    }
+    results {
+      id
+      image
+      name
+      origin {
+        name
+      }
+    }
+  }
+}
