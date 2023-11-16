@@ -48,9 +48,11 @@ struct CellView: View {
                             
             VStack(alignment: .leading){
                 Text(character.name)
-                    .font(.title)
+                    .font(.titleFont)
+
                 Text("Origin: \(character.origin.name)")
-                    .font(.subheadline)
+                    .font(.subtitleFont)
+
             }
             .foregroundStyle(.black)
             .padding()

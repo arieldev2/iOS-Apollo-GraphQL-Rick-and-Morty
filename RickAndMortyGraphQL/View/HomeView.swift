@@ -11,6 +11,12 @@ struct HomeView: View {
     
     @StateObject var vm = RMViewModel()
     
+    init() {
+        UINavigationBar.appearance().largeTitleTextAttributes = [.font : UIFont(name: FontTypes.RobotoMonoBold.rawValue, size: 35)!]
+        UINavigationBar.appearance().titleTextAttributes = [.font : UIFont(name: FontTypes.RobotoMonoBold.rawValue, size: 20)!]
+        
+     }
+    
     var body: some View {
         NavigationStack{
             ScrollView{
@@ -22,7 +28,6 @@ struct HomeView: View {
                                 vm.fetchCharacters(paginate: true)
                             }
                         }
-                        
                     }
                     if vm.isLoading{
                         ProgressView()

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B0A01102B05C3A800852A9D /* RobotoMono-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5B0A010F2B05C3A800852A9D /* RobotoMono-VariableFont_wght.ttf */; };
+		5B0A01142B05C64E00852A9D /* Font+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0A01132B05C64E00852A9D /* Font+Extension.swift */; };
 		5BAF1D652B043E52004A3DCF /* RickAndMortyGraphQLApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAF1D642B043E52004A3DCF /* RickAndMortyGraphQLApp.swift */; };
 		5BAF1D672B043E52004A3DCF /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAF1D662B043E52004A3DCF /* HomeView.swift */; };
 		5BAF1D692B043E54004A3DCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BAF1D682B043E54004A3DCF /* Assets.xcassets */; };
@@ -25,6 +27,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5B0A010F2B05C3A800852A9D /* RobotoMono-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoMono-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		5B0A01112B05C40400852A9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		5B0A01132B05C64E00852A9D /* Font+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Extension.swift"; sourceTree = "<group>"; };
 		5BAF1D612B043E52004A3DCF /* RickAndMortyGraphQL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickAndMortyGraphQL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BAF1D642B043E52004A3DCF /* RickAndMortyGraphQLApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickAndMortyGraphQLApp.swift; sourceTree = "<group>"; };
 		5BAF1D662B043E52004A3DCF /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -54,6 +59,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B0A010E2B05C37F00852A9D /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				5B0A010F2B05C3A800852A9D /* RobotoMono-VariableFont_wght.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		5B0A01122B05C63600852A9D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5B0A01132B05C64E00852A9D /* Font+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		5BAF1D582B043E52004A3DCF = {
 			isa = PBXGroup;
 			children = (
@@ -73,6 +94,9 @@
 		5BAF1D632B043E52004A3DCF /* RickAndMortyGraphQL */ = {
 			isa = PBXGroup;
 			children = (
+				5B0A01122B05C63600852A9D /* Extensions */,
+				5B0A01112B05C40400852A9D /* Info.plist */,
+				5B0A010E2B05C37F00852A9D /* Fonts */,
 				5BB183F02B0564B600B382FF /* View */,
 				5BAF1D862B0447A2004A3DCF /* Model */,
 				5BAF1D832B044353004A3DCF /* ViewModel */,
@@ -198,6 +222,7 @@
 			files = (
 				5BAF1D6C2B043E54004A3DCF /* Preview Assets.xcassets in Resources */,
 				5BAF1D692B043E54004A3DCF /* Assets.xcassets in Resources */,
+				5B0A01102B05C3A800852A9D /* RobotoMono-VariableFont_wght.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,6 +238,7 @@
 				5BAF1D882B0447B0004A3DCF /* RMCharacter.swift in Sources */,
 				5BAF1D822B04432A004A3DCF /* Network.swift in Sources */,
 				5BB183EF2B0564B100B382FF /* CellView.swift in Sources */,
+				5B0A01142B05C64E00852A9D /* Font+Extension.swift in Sources */,
 				5BAF1D8C2B045D0A004A3DCF /* RMInfo.swift in Sources */,
 				5BAF1D8A2B045CEF004A3DCF /* RMOrigin.swift in Sources */,
 				5BAF1D852B044363004A3DCF /* RMViewModel.swift in Sources */,
@@ -352,6 +378,7 @@
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RickAndMortyGraphQL/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -381,6 +408,7 @@
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RickAndMortyGraphQL/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
