@@ -10,8 +10,11 @@
   },
   "output" : {
     "testMocks" : {
-      "none" : {
-      }
+        "swiftPackage" : {
+
+          "targetName" : "RickAndMortyTestMocks"
+
+        }
     },
     "schemaTypes" : {
       "path" : "./RickAndMortyAPI",

@@ -12,12 +12,19 @@ import RickAndMortyAPI
 @MainActor
 final class RMViewModel: ObservableObject {
     
+    let service: NetworkDelegate
+    
     @Published var characters: [RMCharacter] = []
+    @Published var errorMessage: String = ""
     @Published var isLoading: Bool = false
     @Published private var page: GraphQLNullable<Int> = 1
-    @Published private var pageInfo: RMInfo? = nil
+    @Published var pageInfo: RMInfo? = nil
     
-    func fetchCharacters(paginate: Bool = false, refresh: Bool = false) {
+    init(service: NetworkDelegate = Network.shared){
+        self.service = service
+    }
+    
+    public func fetchCharacters(paginate: Bool = false, refresh: Bool = false) {
         
         isLoading = true
         
@@ -33,12 +40,12 @@ final class RMViewModel: ObservableObject {
             self.page = 1
         }
         
-        Network.shared.apollo.fetch(query: CharacterListQuery(page: page)) { [weak self] result in
+        service.getCharacters(page: page) { [weak self] result in
             switch result {
-            case .success(let result):
-                self?.processdata(data: result.data)
+            case .success(let data):
+                self?.processdata(data: data)
             case .failure(let error):
-                print("Failure! Error: \(error)")
+                self?.errorMessage = error.message
             }
         }
     }
