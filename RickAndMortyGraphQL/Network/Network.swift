@@ -33,7 +33,7 @@ protocol NetworkDelegate{
     func getCharacters(page: GraphQLNullable<Int>, completion: @escaping (Result<CharacterListQuery.Data?, ErrorNetwork>) -> Void)
 }
 
-class Network: NetworkDelegate{
+final class Network: NetworkDelegate{
     
     static let shared = Network()
     
