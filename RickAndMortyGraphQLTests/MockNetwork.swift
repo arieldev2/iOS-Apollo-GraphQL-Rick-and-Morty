@@ -42,7 +42,7 @@ let mock = Mock<Query>(
 )
 
 
-class MockNetwork: NetworkDelegate{
+class MockNetwork: NetworkProtocol{
     func getCharacters(page: GraphQLNullable<Int>, completion: @escaping (Result<CharacterListQuery.Data?, ErrorNetwork>) -> Void) {
         
         let data = CharacterListQuery.Data.from(mock)

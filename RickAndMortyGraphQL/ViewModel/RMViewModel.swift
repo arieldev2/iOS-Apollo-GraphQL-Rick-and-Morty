@@ -12,7 +12,7 @@ import RickAndMortyAPI
 @MainActor
 final class RMViewModel: ObservableObject {
     
-    let service: NetworkDelegate
+    let service: NetworkProtocol
     
     @Published var characters: [RMCharacter] = []
     @Published var errorMessage: String = ""
@@ -20,7 +20,7 @@ final class RMViewModel: ObservableObject {
     @Published private var page: GraphQLNullable<Int> = 1
     @Published var pageInfo: RMInfo? = nil
     
-    init(service: NetworkDelegate = Network.shared){
+    init(service: NetworkProtocol = Network.shared){
         self.service = service
     }
     

@@ -29,11 +29,11 @@ enum ErrorNetwork: Error{
     }
 }
 
-protocol NetworkDelegate{
+protocol NetworkProtocol{
     func getCharacters(page: GraphQLNullable<Int>, completion: @escaping (Result<CharacterListQuery.Data?, ErrorNetwork>) -> Void)
 }
 
-final class Network: NetworkDelegate{
+final class Network: NetworkProtocol{
     
     static let shared = Network()
     
