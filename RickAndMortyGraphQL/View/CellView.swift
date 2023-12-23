@@ -13,38 +13,7 @@ struct CellView: View {
     
     var body: some View {
         VStack(alignment: .leading){
-            AsyncImage(url: URL(string: character.image)) { phase in
-                
-                switch phase {
-                case .empty:
-                    ProgressView()
-                case .success(let image):
-                    image
-                        .resizable()
-                        .scaledToFill()
-                        .frame(height: 350)
-                case .failure( _):
-                    HStack(alignment: .center){
-                        Image(systemName: "xmark.octagon")
-                            .resizable()
-                            .frame(width: 100, height: 100)
-                            .foregroundStyle(.black)
-                            .padding()
-                            .padding(.top, 20)
-                    }
-                    .frame(maxWidth: .infinity)
-                @unknown default:
-                    HStack(alignment: .center){
-                        Image(systemName: "xmark.octagon")
-                            .resizable()
-                            .frame(width: 100, height: 100)
-                            .foregroundStyle(.black)
-                            .padding()
-                            .padding(.top, 20)
-                    }
-                    .frame(maxWidth: .infinity)
-                }
-            }
+            AsyncImageView(url: URL(string: character.image))
                             
             VStack(alignment: .leading){
                 Text(character.name)
